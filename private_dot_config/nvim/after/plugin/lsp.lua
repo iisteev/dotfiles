@@ -137,24 +137,5 @@ cmp.setup {
   },
 }
 
--- formatter runner
-local formatter = require "formatter"
-local formatter_filetypes = require "formatter.filetypes"
-
-formatter.setup {
-  logging = true,
-  log_level = vim.log.levels.WARN,
-  filetype = {
-    python = {
-      formatter_filetypes.python.black,
-    },
-    go = {
-      formatter_filetypes.go.gofmt
-    },
-    ["*"] = {
-      formatter_filetypes.any.remove_trailing_whitespace,
-    }
-  },
-}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

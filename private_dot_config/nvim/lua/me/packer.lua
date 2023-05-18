@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'mhartington/formatter.nvim'
     use 'folke/tokyonight.nvim'
+    use 'mfussenegger/nvim-lint'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     use {

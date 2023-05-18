@@ -10,7 +10,8 @@ formatter.setup {
       formatter_filetypes.python.black,
     },
     go = {
-      formatter_filetypes.go.gofmt
+      formatter_filetypes.go.gofmt,
+      formatter_filetypes.go.goimports,
     },
     ["*"] = {
       formatter_filetypes.any.remove_trailing_whitespace,

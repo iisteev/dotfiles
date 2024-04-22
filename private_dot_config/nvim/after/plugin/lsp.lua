@@ -18,6 +18,12 @@ local on_attach = function(_, bufnr)
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
+  -- Diagnostic keymaps
+  nmap('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message' )
+  nmap(']d', vim.diagnostic.goto_next, 'Go to next [D]iagnostic message' )
+  nmap('<leader>e', vim.diagnostic.open_float, 'Show diagnostic [E]rror messages' )
+  nmap('<leader>q', vim.diagnostic.setloclist, 'Open diagnostic [Q]uickfix list')
+
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')

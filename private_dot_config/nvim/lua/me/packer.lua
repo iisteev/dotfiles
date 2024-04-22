@@ -13,11 +13,6 @@ return require('packer').startup(function(use)
     use 'mhartington/formatter.nvim'
     use 'folke/tokyonight.nvim'
     use 'mfussenegger/nvim-lint'
-    use {
-        'folke/todo-comments.nvim',
-        event = 'VimEnter',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     use {

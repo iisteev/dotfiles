@@ -39,8 +39,8 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' },
 
             -- Useful status updates for LSP
-            -- NOTE: `opts = true` is the same as calling `require('fidget').setup({})`
-            { 'j-hui/fidget.nvim',                opts = true },
+            -- NOTE: `opt = true` is the same as calling `require('fidget').setup({})`
+            { 'j-hui/fidget.nvim' },
 
             -- Additional lua configuration, makes nvim stuff amazing!
             'folke/neodev.nvim',

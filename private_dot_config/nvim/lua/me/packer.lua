@@ -16,6 +16,10 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     use {
+        'folke/todo-comments.nvim',
+        requires = { { 'nvim-lua/plenary.nvim' } },
+    }
+    use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }

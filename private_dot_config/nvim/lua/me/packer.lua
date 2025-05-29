@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'mfussenegger/nvim-lint'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'jakewvincent/mkdnflow.nvim', tag = 'v1.2.4' }
 
     use {
         'folke/todo-comments.nvim',

@@ -34,8 +34,8 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
         requires = {
             -- Automatically install LSPs to stdpath for neovim
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            { 'mason-org/mason.nvim', tag = 'v2.0.0' },
+            { 'mason-org/mason-lspconfig.nvim', tag = 'v2.0.0' },
 
             -- Useful status updates for LSP
             -- NOTE: `opt = true` is the same as calling `require('fidget').setup({})`

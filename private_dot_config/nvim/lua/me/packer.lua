@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
     --  The configuration is done below. Search for lspconfig to find it below.
     use { -- LSP Configuration & Plugins
         'neovim/nvim-lspconfig',
+        tag = "v2.5.0",
         requires = {
             -- Automatically install LSPs to stdpath for neovim
             { 'mason-org/mason.nvim', tag = 'v2.0.0' },
@@ -40,10 +41,7 @@ return require('packer').startup(function(use)
 
             -- Useful status updates for LSP
             -- NOTE: `opt = true` is the same as calling `require('fidget').setup({})`
-            { 'j-hui/fidget.nvim' },
-
-            -- Additional lua configuration, makes nvim stuff amazing!
-            'folke/neodev.nvim',
+            { 'j-hui/fidget.nvim', tag = "v1.6.1" },
         },
     }
 

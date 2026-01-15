@@ -19,8 +19,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
   -- Diagnostic keymaps
-  nmap('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message' )
-  nmap(']d', vim.diagnostic.goto_next, 'Go to next [D]iagnostic message' )
   nmap('<leader>e', vim.diagnostic.open_float, 'Show diagnostic [E]rror messages' )
   nmap('<leader>q', vim.diagnostic.setloclist, 'Open diagnostic [Q]uickfix list')
 
@@ -32,7 +30,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   -- See `:help K` for why this keymap
-  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
@@ -69,9 +66,6 @@ local servers = {
   },
 }
 
--- Setup neovim lua configuration
-require('neodev').setup()
-
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -87,11 +81,11 @@ mason_lspconfig.setup {
 }
 
 for server_name, settings in pairs(servers) do
-  require('lspconfig')[server_name].setup {
+  vim.lsp.config(server_name, {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = settings,
-  }
+  })
 end
 
 -- nvim-cmp setup

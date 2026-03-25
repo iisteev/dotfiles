@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
     use 'mhartington/formatter.nvim'
     use 'folke/tokyonight.nvim'
     use 'mfussenegger/nvim-lint'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', tag = 'v0.10.0' }
     use { 'jakewvincent/mkdnflow.nvim', tag = 'v1.2.4' }
 
     use {
